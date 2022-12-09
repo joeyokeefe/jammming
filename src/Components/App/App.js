@@ -34,19 +34,19 @@ class App extends React.Component {
           name: "Evil Woman",
           artist: "ELO",
           album: "Face the Music",
-          id: 1,
+          id: 4,
         },
         {
           name: "Peace of Mind",
           artist: "Boston",
           album: "Boston",
-          id: 2,
+          id: 5,
         },
         {
           name: "Reptilia",
           artist: "The Strokes",
           album: "Room on Fire",
-          id: 3,
+          id: 6,
         },
       ],
     };
@@ -56,14 +56,14 @@ class App extends React.Component {
   }
   addTrack(track) {
     if (
-      this.props.playlistTracks.find((savedTrack) => savedTrack.id === track.id)
+      this.state.playlistTracks.find((savedTrack) => savedTrack.id === track.id)
     ) {
       return;
     }
     this.setState({ playlistTracks: [...this.state.playlistTracks, track] });
   }
   removeTrack(track) {
-    const newPlaylist = this.props.playlistTracks.filter(
+    const newPlaylist = this.state.playlistTracks.filter(
       (songs) => songs.id !== track.id
     );
     this.setState({ playlistTracks: newPlaylist });
