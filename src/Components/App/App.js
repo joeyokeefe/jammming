@@ -3,7 +3,6 @@ import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import Playlist from "../Playlist/Playlist";
 import SearchResults from "../SearchResults/SearchResults";
-import TrackList from "../TrackList/TrackList";
 
 class App extends React.Component {
   constructor(props) {
@@ -79,7 +78,7 @@ class App extends React.Component {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          {/* <!-- Add a SearchBar component --> */}
+          <SearchBar />
           <div className="App-playlist">
             <SearchResults
               searchResults={this.state.searchResults}
